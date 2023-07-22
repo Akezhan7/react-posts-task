@@ -1,38 +1,149 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+table {
+    max-width: 1077px;
+    width: 100%;
+    border-spacing: 0;
+    margin: 0;
+}
+thead {
+    background-color: #474955;
+    color: white;
+}
+tbody {
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    color: #474955;
+}
+tbody td {
+    border: 1px solid #E3E6EC !important;
+}
+.postid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 26px 0;
+}
+.posttext {
+    padding-left: 10px;
+}
+thead tr{
+    background-color: #474955;
+}
+thead th {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    padding: 16px 0 16px 0px;
+    margin: 0px !important;
+}
+thead th:nth-child(1) {
+    width: 10%;
+}
+thead th:nth-child(2) {
+    width: 50%;
+}
+thead th:nth-child(3) {
+    width: 40%;
+}
+thead th img{
+    margin-left: 39px;
+}
+.input-icon {
+    position: relative;
+    max-width: 631px;
+    width: 100%;
+    margin-bottom: 15px;
+    margin-right: 10px;
+    overflow: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.icon {
+position: absolute;
+top: 50%;
+right: 20px;
+transform: translateY(-50%);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+input {
+    background-color: #5A5C66;
+    color: white;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    padding: 16px 0 16px 26px;
+    border: none;
+    width: 100%;
+}
+input::placeholder {
+    color: #B2B7BF;
 }
 
-.App-link {
-  color: #61dafb;
+.btnstyle {
+    background: none;
+    border: none;
+    color: #474955;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+}
+.pag {
+    max-width: 1077px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 15px;
+}
+.pag-element button{
+    background: none;
+    border: none;
+    color: #474955;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 700;
+    margin: 0 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.active {
+    color: #7EBC3C !important;
+}
+@media screen and (max-width: 800px) {
+    thead th img{
+        margin-left: 9px;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    thead th img{
+        margin-left: 9px;
+        width: 8px;
+        height: 8px;
+    }
+    thead th {
+        font-size: 10px;
+    }
+    tbody {
+        font-size: 10px;
+    }
+    .pag {
+        max-width: 1077px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+    .pag-element button{
+        font-size: 13px;
+        margin: 0 2px;
+    }
+    .btnstyle {
+        font-size: 16px;
+    }
 }
